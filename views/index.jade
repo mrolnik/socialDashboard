@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome #{user.user}
+	a.login.fb(href='#') Loggearme en Facebook
+	a.login.tw(href='#') Loggearme en Twitter
+	a.login.yt(href='#') Loggearme en Youtube
+	a.login.gp(href='#') Loggearme en Google+
+	include facebookScript

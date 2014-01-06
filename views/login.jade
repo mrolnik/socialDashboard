@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1 #{title} 
+	div.error #{error}
+	form#login(method='post')
+		label Usuario
+		input(type='text', name='user', required)
+		label Contraseña
+		input(type='password', name='password', required)
+		input(type='submit', class='logSubmit' value='Iniciar sesion')
+	a.register(href='#') ¿No estás registrado?
+	form#register.hidden(method='post' action='/register')
+			label Usuario
+			input(type='text', name='user', required)
+			label Contraseña
+			input(type='password', name='password', required)
+			label Confirmar contraseña
+			input(type='password', name='confirm', required)
+			label Email
+			input(type='email', name='email', required)
+
+			input(type='submit', class='regSubmit', value='Iniciar sesion')
